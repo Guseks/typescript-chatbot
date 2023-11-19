@@ -41,8 +41,8 @@ Images/
 node_modules
 ChatBot.ts
 index.ts
-package.json
 package-lock.json
+package.json
 README.md
 tsconfig.json
 
