@@ -1,7 +1,6 @@
 
 const {HelpCommand, WeatherCommand, JokeCommand, GreetCommand} = require("../commands");
 const {Chatbot} = require("../ChatBot");
-const exp = require("constants");
 
 
 describe("HelpCommand", (): void => {
