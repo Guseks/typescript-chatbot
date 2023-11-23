@@ -31,6 +31,24 @@ The Chatbot responds with messages that should be considered an example. Below i
 ### Example 3 ( Joke command )
 <img src="./Images/jokeExample.png" width =  "100%">
 
+### Running Tests
+
+To run test located in the tests folder, run the following command in the terminal:
+
+``````
+npm test
+``````
+This will run the test-suite which tests each part of the application using several unit-tests.  
+The tests uses Jest as a testing library and each test has a similar implementation, an example can be seen below:
+
+``````ts
+describe("WeatherCommand", (): void =>{
+  it("should return a message with information about the weather", (): void =>{
+    const result = new WeatherCommand().execute();
+    expect(result.toLowerCase()).toMatch(/weather/);
+  });
+});
+``````
 ## Project Structure
 The project folder is structured as follows:
 
@@ -39,6 +57,7 @@ The project folder is structured as follows:
 dist/
 Images/
 node_modules
+tests/
 ChatBot.ts
 index.ts
 package-lock.json
@@ -51,9 +70,13 @@ tsconfig.json
 - `Images` contains images used in the project, mainly in the README.
 - `ChatBot.ts` is the actual implementation of the chatbot. How it should respond and behave. 
 - `index.ts` The main application loop and user interactions. 
+- `tests` folder contains the testsuite for the application which contain different unit-tests.
 
 
 ## Technologies Used
 The project uses the following languages:
 - TypeScript
+
+### Libraries used
+- Jest
 
